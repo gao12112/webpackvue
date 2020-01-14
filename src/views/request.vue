@@ -18,15 +18,15 @@ export default {
     HelloWorld
   },
   created () {
-    // apiAddress({
-    //   type: 0,
-    //   sort: 1
-    // }).then(res => {
+    apiAddress({
+      type: 0,
+      sort: 1
+    }).then(res => {
 
-    // })
+    })
 
     this.$post("/api/index/index", {
-
+      a: 1
     })
       .then(function (response) {
         console.log(response)
