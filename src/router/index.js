@@ -17,6 +17,11 @@ export default new Router({
       component: () => import("@/views/request.vue")
     },
     {
+      path: "/reload",
+      name: "reload",
+      component: () => import("@/views/reload.vue")
+    },
+    {
       path: "/vant",
       name: "vant",
       component: () => import(/* webpackChunkName: "vant" */ "../views/vant.vue")
