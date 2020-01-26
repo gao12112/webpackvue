@@ -5,8 +5,7 @@ Vue.use(Router)
 
 export default new Router({
   // history: true,
-  routes: [
-    {
+  routes: [{
       path: "/",
       name: "home",
       component: Home
@@ -24,27 +23,27 @@ export default new Router({
     {
       path: "/vant",
       name: "vant",
-      component: () => import(/* webpackChunkName: "vant" */ "../views/vant.vue")
+      component: () => import( /* webpackChunkName: "vant" */ "../views/vant.vue")
     },
     {
       path: "/vant/botton",
       name: "vant_botton",
-      component: () => import(/* webpackChunkName: "about" */ "../views/vant/botton.vue")
+      component: () => import( /* webpackChunkName: "about" */ "../views/vant/botton.vue")
     },
     {
       path: "/vant/cell",
       name: "vant_cell",
-      component: () => import(/* webpackChunkName: "about" */ "../views/vant/cell.vue")
+      component: () => import( /* webpackChunkName: "about" */ "../views/vant/cell.vue")
     },
     {
       path: "/about",
       name: "about",
-      component: () => import(/* webpackChunkName: "about" */ "../views/About.vue")
+      component: () => import( /* webpackChunkName: "about" */ "../views/About.vue")
     },
     {
       path: "/empty",
       name: "empty",
-      component: () => import(/* webpackChunkName: "about" */ "../views/Empty.vue")
+      component: () => import( /* webpackChunkName: "about" */ "../views/Empty.vue")
     }
   ]
 })
