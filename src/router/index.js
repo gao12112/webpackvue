@@ -4,21 +4,21 @@ import Home from "../views/Home.vue"
 Vue.use(Router)
 
 export default new Router({
-  // history: true,
+  history: true,
   routes: [{
       path: "/",
       name: "home",
-      component: Home
+      component: () => import( /* webpackChunkName: "about" */ "@/views/Home.vue")
     },
     {
       path: "/request",
       name: "request",
-      component: () => import("@/views/request.vue")
+      component: () => import( /* webpackChunkName: "about" */ "@/views/request.vue")
     },
     {
       path: "/reload",
       name: "reload",
-      component: () => import("@/views/reload.vue")
+      component: () => import( /* webpackChunkName: "about" */ "@/views/reload.vue")
     },
     {
       path: "/vant",
