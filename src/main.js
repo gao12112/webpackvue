@@ -4,7 +4,7 @@ import Vue from "vue"
 import App from "./App"
 import router from "./router"
 // import axios from "axios"
-import {get, post} from "@/request/http"
+import {get, post, patch, put} from "@/request/http"
 import { Button, Cell, CellGroup, Toast } from "vant"
 // Vue.use(axios)
 Vue.use(Button)
@@ -17,6 +17,8 @@ Vue.config.productionTip = false
 
 Vue.prototype.$get = get
 Vue.prototype.$post = post
+Vue.prototype.$patch = patch
+Vue.prototype.$put = put
 // Vue.prototype.$post = post
 /* eslint-disable no-new */
 new Vue({
