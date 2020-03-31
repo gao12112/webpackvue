@@ -1,6 +1,7 @@
 'use strict'
 module.exports = {
   NODE_ENV: '"production"',
+  Mock:false,
   proxy:{
     '/api': {
       target: '"http://www.slkc.com"',  //目标接口域名

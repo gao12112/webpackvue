@@ -12,6 +12,9 @@ if (process.env.NODE_ENV === "development") {
 } else if (process.env.NODE_ENV === "production") {
   axios.defaults.baseURL = "http://localhost:7000/"
 }
+if (process.env.Mock) {
+  axios.defaults.baseURL = ""
+}
 // 请求超时时间
 axios.defaults.timeout = 10000
 

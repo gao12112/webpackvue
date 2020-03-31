@@ -7,6 +7,8 @@
       <router-link :to="{ name: 'reload'}">页面刷新</router-link> |
       <router-link to="/about">About</router-link>|
       <router-link :to="{ name:'vue2toast'}">弹出框</router-link>
+
+      <router-link :to="{ name:'mock'}">mock数据</router-link>
     </div>
     <router-view v-if="isRouterAlive" ></router-view>
   </div>
