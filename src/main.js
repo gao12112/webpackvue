@@ -6,6 +6,7 @@ import router from "./router"
 // import axios from "axios"
 import {get, post, patch, put} from "@/request/http"
 import { Button, Cell, CellGroup, Toast } from "vant"
+import "babel-polyfill"
 // Vue.use(axios)
 Vue.use(Button)
 Vue.use(Cell)

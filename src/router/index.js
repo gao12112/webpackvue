@@ -45,6 +45,11 @@ export default new Router({
       path: "/empty",
       name: "empty",
       component: () => import(/* webpackChunkName: "about" */ "../views/Empty.vue")
+    },
+    {
+      path: "/vue2toast",
+      name: "vue2toast",
+      component: () => import(/* webpackChunkName: "about" */ "../views/vue2toast.vue")
     }
   ]
 })
