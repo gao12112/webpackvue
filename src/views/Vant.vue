@@ -4,6 +4,7 @@
     <div><router-link :to="{ name: 'vant_cell'}">Cell 单元格</router-link></div>
 
     <button @click="totast()">弹出框</button>
+     <van-button type="info">信息按钮1</van-button>
   </div>
 </template>
 <script>

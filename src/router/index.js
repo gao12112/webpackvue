@@ -54,6 +54,11 @@ export default new Router({
     path: "/mock",
     name: "mock",
     component: () => import(/* webpackChunkName: "about" */ "../views/mock.vue")
+  },
+  {
+    path: "/pxRem",
+    name: "pxRem",
+    component: () => import(/* webpackChunkName: "about" */ "../views/pxRem.vue")
   }
   ]
 })
