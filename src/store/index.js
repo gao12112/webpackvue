@@ -12,7 +12,7 @@ export default new Vuex.Store({
     persistedState({
       storage: {
         getItem: key => Cookies.get(key),
-        setItem: (key, value) => Cookies.set(key, value, { expires: 7 }),
+        setItem: (key, value) => Cookies.set(key, value, { expires: 7000 }),
         removeItem: key => Cookies.remove(key)
       }
     })

@@ -16,7 +16,7 @@ export default {
     width:20rem;
     height:10rem;
     background-color: bisque;
-    text-align: center；
+    text-align: center;
 }
 .hello{
     color:red;
