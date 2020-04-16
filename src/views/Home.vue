@@ -10,6 +10,8 @@
 
       <router-link :to="{ name:'mock'}">mock数据</router-link>|
       <router-link :to="{ name:'pxRem'}">px转rem</router-link>|
+
+          <router-link :to="{ name:'wap'}">wap</router-link>|
     </div>
 
     <!-- <img alt="Vue logo" src="../assets/logo.png" />

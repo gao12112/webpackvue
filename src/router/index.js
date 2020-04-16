@@ -9,6 +9,18 @@ export default new Router({
     path: "/",
     name: "home",
     component: () => import(/* webpackChunkName: "about" */ "@/views/Home.vue")
+  }, {
+    path: "/wap",
+    name: "wap",
+    meta: {
+      requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
+    },
+    component: () => import(/* webpackChunkName: "about" */ "@/views/wap/index.vue")
+  },
+  {
+    path: "/wap/login",
+    name: "/wap/login",
+    component: () => import(/* webpackChunkName: "about" */ "@/views/wap/login.vue")
   },
   {
     path: "/request",

@@ -24,6 +24,18 @@ export default {
       this.$nextTick(function () {
         this.isRouterAlive = true
       })
+    },
+    _isMobile () {
+      let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return flag
+    }
+  },
+  mounted () {
+    if (this._isMobile()) {
+      console.log(11)
+      // this.$router.replace("/wap")
+    } else {
+      // this.$router.replace("/")
     }
   }
 }
