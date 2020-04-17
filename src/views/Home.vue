@@ -11,7 +11,12 @@
       <router-link :to="{ name:'mock'}">mock数据</router-link>|
       <router-link :to="{ name:'pxRem'}">px转rem</router-link>|
 
-          <router-link :to="{ name:'wap'}">wap</router-link>|
+      <div>
+       <input v-model="id" type="text" placeholder="进入wap 传参ID" />
+       <router-link :to="{ name:'wap',query: { id: id }}">跳转wap</router-link>
+       <div>state 中id 值 {{ids}}</div>
+      </div>
+
     </div>
 
     <!-- <img alt="Vue logo" src="../assets/logo.png" />
@@ -23,10 +28,25 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue"
+// import store from "../store/index"
 export default {
   name: "home",
   components: {
     HelloWorld
+  },
+  data: function () {
+    return {
+      id: "1"
+      // ids: "qqq"
+      // ids: this.$store.state.id
+    }
+  },
+  computed: {
+    ids: function () {
+      console.log(this.$store.state.id)
+      return this.$store.state.id
+      // return store.state.id
+    }
   }
 }
 </script>

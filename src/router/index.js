@@ -8,6 +8,9 @@ export default new Router({
   routes: [{
     path: "/",
     name: "home",
+    meta: {
+      requireAuth: false
+    },
     component: () => import(/* webpackChunkName: "about" */ "@/views/Home.vue")
   }, {
     path: "/wap",
@@ -15,12 +18,14 @@ export default new Router({
     meta: {
       requireAuth: true // 添加该字段，表示进入这个路由是需要登录的
     },
-    component: () => import(/* webpackChunkName: "about" */ "@/views/wap/index.vue")
+    component: () => import(/* webpackChunkName: "about" */ "@/views/wap/index.vue"),
+    props: (route) => ({ id: route.query.id })
   },
   {
     path: "/wap/login",
     name: "/wap/login",
     component: () => import(/* webpackChunkName: "about" */ "@/views/wap/login.vue")
+
   },
   {
     path: "/request",

@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 export default {
   name: "app",
   provide () {
@@ -32,11 +33,18 @@ export default {
   },
   mounted () {
     if (this._isMobile()) {
-      console.log(11)
+      // console.log(11)
       // this.$router.replace("/wap")
     } else {
+      // console.log(12)
       // this.$router.replace("/")
     }
+    // console.log(this.$route)
+    // console.log(this.$route.query)
+    // console.log(this.$route.params)
+    // var id = this.$route.query.id
+    // console.log(id)
+    // console.log(11)
   }
 }
 </script>
