@@ -22,7 +22,7 @@ export default new Vuex.Store({
   state: {
     id: "",
     token: "",
-    list: {"id2": {"id": 2, "token": 1}, "id1": {"id": 1, "token": 1}}
+    list: {}
   },
   mutations: {
     setid (state, id) {
@@ -41,8 +41,8 @@ export default new Vuex.Store({
     changeId ({ commit, state }, id) {
       var list = state.list
       if (list["id" + id] !== undefined) {
-        commit("id", id)
-        commit("token", list["id" + id].token)
+        commit("setid", id)
+        commit("settoken", list["id" + id].token)
       } else {
         router.replace({
           path: "/wap/login",

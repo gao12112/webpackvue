@@ -43,7 +43,6 @@ export default {
   },
   computed: {
     ids: function () {
-      console.log(this.$store.state.id)
       return this.$store.state.id
       // return store.state.id
     }

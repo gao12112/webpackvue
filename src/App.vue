@@ -39,12 +39,6 @@ export default {
       // console.log(12)
       // this.$router.replace("/")
     }
-    // console.log(this.$route)
-    // console.log(this.$route.query)
-    // console.log(this.$route.params)
-    // var id = this.$route.query.id
-    // console.log(id)
-    // console.log(11)
   }
 }
 </script>
